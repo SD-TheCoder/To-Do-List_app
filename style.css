@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  background: linear-gradient(135deg, #153677, #4e085f);
+  padding: 10px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.todo_app {
+  background-color: white;
+  width: 100%;
+  max-width: 550px;
+  border-radius: 10px;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+}
+
+.todo_app h1 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.todo_app h1 img {
+  width: 40px;
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  /* border: 1px solid black; */
+  background-color: #edeef0;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.row input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 15px;
+}
+
+.row button {
+  border: none;
+  outline: none;
+  background-color: blue;
+  color: white;
+  padding: 16px 50px;
+  border-radius: 40px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+ul li {
+  font-size: 17px;
+  padding: 8px 12px 8px 50px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  position: relative;
+}
+
+ul li::before {
+  background-image: url("images/uncheck.png");
+  content: "";
+  background-size: cover;
+  width: 28px;
+  height: 28px;
+  background-position: center;
+  position: absolute;
+  border-radius: 50%;
+  left: 15px;
+  top: 5px;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.checked:before {
+  background-image: url(images/check.png);
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li span:hover {
+  background-color: #edeef0;
+}
+
+@media (min-width: 300px) and (max-width: 400px) {
+  .row {
+    padding-left: 0;
+  }
+  .todo_app {
+    padding-left: 15px;
+  }
+  .row button {
+    padding: 15px 25px;
+    border-radius: 40px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 299px) {
+  .row input {
+    padding: 10px;
+  }
+}
